@@ -7,8 +7,8 @@ on:
 
 env:
   DOCKER_HUB_USERNAME: jokerdab
-  DOCKER_HUB_REPOSITORY: app
-  IMAGE_NAME: jwt
+  DOCKER_HUB_REPOSITORY: app-jwt
+  IMAGE_NAME: app-jwt
   TAG: latest
 
 jobs:
