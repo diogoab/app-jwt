@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-app-service
+spec:
+  selector:
+    app: node-app
+  ports:
+    - protocol: TCP
+      port: 80  # Porta em que o serviço será exposto
+      targetPort: 3000  # Porta em que sua aplicação Node.js está ouvindo
+  type: LoadBalancer  # Tipo de serviço (pode variar dependendo do ambiente)

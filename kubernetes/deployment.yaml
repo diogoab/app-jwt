@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-app-deployment
+spec:
+  replicas: 1  # Número de réplicas desejado
+  selector:
+    matchLabels:
+      app: node-app
+  template:
+    metadata:
+      labels:
+        app: node-app
+    spec:
+      containers:
+        - name: node-app
+          image: jokerdab/app-jwt:latest  # Substitua com o nome da sua imagem
+          ports:
+            - containerPort: 3000  # Porta em que sua aplicação Node.js está ouvindo
