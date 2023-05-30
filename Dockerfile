@@ -5,7 +5,7 @@ FROM node:16
 WORKDIR /app
 
 # Copia os arquivos do projeto para o diretório de trabalho
-COPY .env package-lock.json /app/
+COPY .env package.json package-lock.json /app/
 
 # Instala as dependências do projeto
 RUN npm install
