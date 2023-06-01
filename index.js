@@ -17,7 +17,7 @@ app.get('/', (req, res, next) => {
 
 app.get('/clientes', verifyJWT, (req, res, next) => {
   console.log("Retornou todos clientes!");
-  res.json([{ id: 1, nome: 'luiz' }]);
+  res.json([{ id: 1, nome: 'Diogo' }]);
 })
 
 function verifyJWT(req, res, next) {
@@ -38,7 +38,7 @@ function verifyJWT(req, res, next) {
 
 app.post('/login', (req, res, next) => {
   //esse teste abaixo deve ser feito no seu banco de dados
-  if (req.body.user === 'luiz' && req.body.pwd === '123') {
+  if (req.body.user === 'diogo' && req.body.pwd === '123456') {
     //auth ok
     const userId = 1; //esse id viria do banco de dados
     const token = jwt.sign({ userId }, process.env.SECRET, {
